@@ -1,0 +1,17 @@
+.git
+.env
+.env.*
+!.env.example
+data/
+dumps/
+tests/
+tools/
+docs/
+*.har
+*.zip
+**/__pycache__
+**/*.pyc
+.pytest_cache
+.venv
+venv
+PLAN.md

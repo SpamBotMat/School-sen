@@ -1,0 +1,26 @@
+# секреты и локальные данные
+.env
+.env.*
+!.env.example
+data/
+*.sqlite
+*.db
+
+# дампы и фикстуры с реальными страницами дневника (личные данные!)
+dumps/
+tests/netschool/fixtures/
+*.har
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# прочее
+*.zip
+.DS_Store
+.idea/
+.vscode/

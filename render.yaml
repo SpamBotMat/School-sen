@@ -1,0 +1,30 @@
+# Render Blueprint: Dashboard → New → Blueprint → выбери репозиторий.
+# Секреты (sync: false) Render спросит при создании — их нет в репозитории.
+services:
+  - type: web
+    name: school-sensor
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: APP_ENV
+        value: prod
+      - key: BOT_TOKEN
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: CREDENTIALS_KEY
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: TICK_KEY
+        generateValue: true
+      - key: NETSCHOOL_URL
+        value: http://school.trsosh.edu.tm
+      - key: DB_FLUSH_SECONDS
+        value: "900"
+      - key: LOG_LEVEL
+        value: INFO
